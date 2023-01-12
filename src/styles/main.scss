@@ -9,6 +9,26 @@ body {
   font-family: Inter !important;
 }
 
+.title {
+  color: hsl(240, 100%, 5%);
+  font-weight: 850;
+  letter-spacing: 2px;
+}
+
+.custom-btn {
+  background-color: hsl(5, 85%, 63%);
+  color: white;
+  transition: 200ms;
+  padding: 0.5em 1em;
+  border: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: hsl(240, 100%, 5%);
+  }
+}
+
 .custom-nav-link:hover {
   color: hsl(5, 85%, 63%);
 }
