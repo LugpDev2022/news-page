@@ -1,0 +1,49 @@
+---
+const pages: string[] = ["Home", "New", "Popular", "Trending", "Categories"];
+import logo from "../../public/images/logo.svg";
+---
+
+<nav class="navbar navbar-expand-md mt-1">
+  <div class="container">
+    <a href="#" class="navbar-brand">
+      <img src={logo} alt="logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-label="offcanvas"
+    >
+      <div class="offcanvas-header justify-content-end">
+        <button
+          type="button"
+          class="btn-close mt-1 me-1"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 gap-3">
+          {
+            pages.map((page) => (
+              <li class="nav-item">
+                <a class="nav-link custom-nav-link" href="#">
+                  {page}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,22 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../public/Inter.ttf");
+}
+
+body {
+  font-family: Inter !important;
+}
+
+.custom-nav-link:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+@media (max-width: 767px) {
+  .custom-nav-link {
+    color: black !important;
+    margin-left: 1rem;
+    font-size: 1.2em;
+  }
+}
