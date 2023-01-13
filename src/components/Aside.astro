@@ -24,11 +24,15 @@ const articles: Article[] = [
 
 <aside>
   <div class="d-flex flex-column justify-content-around bg-dark-blue p-4 h-100">
-    <span class="h2 fw-bold text-orange">New</span>
+    <h2 class="fw-bold text-orange">New</h2>
     {
       articles.map((article, i) => (
         <article>
-          <a href="#" class="link-orange fw-bold h5">{article.title}</a>
+          <h3>
+            <a href="#" class="link-orange fw-bold h5">
+              {article.title}
+            </a>
+          </h3>
           <p class="text-muted mb-0 mt-2">{article.content}</p>
 
           {i !== 2 && <hr class="text-white my-4" />}

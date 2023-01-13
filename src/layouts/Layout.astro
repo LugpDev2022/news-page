@@ -1,5 +1,7 @@
 ---
-import '../styles/main.scss'
+import "../styles/main.scss";
+const metaDescContent: string =
+  "We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?";
 ---
 
 <!DOCTYPE html>
@@ -9,16 +11,14 @@ import '../styles/main.scss'
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | News homepage</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon-32x32.png"
-    />
+    <meta name="description" content={metaDescContent} />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   </head>
   <body>
     <slot />
   </body>
 
-  <script>import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js'</script>
+  <script>
+    import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
+  </script>
 </html>
