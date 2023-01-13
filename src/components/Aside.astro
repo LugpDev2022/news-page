@@ -22,16 +22,16 @@ const articles: Article[] = [
 ];
 ---
 
-<aside class="col-12 col-lg-4">
+<aside>
   <div class="d-flex flex-column justify-content-around bg-dark-blue p-4 h-100">
     <span class="h2 fw-bold text-orange">New</span>
     {
       articles.map((article, i) => (
         <article>
           <a href="#" class="link-orange fw-bold h5">{article.title}</a>
-          <p class="text-muted">{article.content}</p>
+          <p class="text-muted mb-0 mt-2">{article.content}</p>
 
-          {i !== 2 && <hr class="text-white my-3" />}
+          {i !== 2 && <hr class="text-white my-4" />}
         </article>
       ))
     }
