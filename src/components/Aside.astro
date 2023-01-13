@@ -1,0 +1,39 @@
+---
+type Article = {
+  title: string;
+  content: string;
+};
+
+const articles: Article[] = [
+  {
+    title: "Hydrogen VS Electric Cars ",
+    content: "Will hydrogen-fueled cars ever catch up to EVs?",
+  },
+  {
+    title: "The Downsides of AI Artistry",
+    content:
+      "What are the possible adverse effects of on-demand AI image generation?",
+  },
+  {
+    title: "Is VC Funding Drying Up?",
+    content:
+      "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
+  },
+];
+---
+
+<aside class="col-12 col-lg-4">
+  <div class="d-flex flex-column justify-content-around bg-dark-blue p-4 h-100">
+    <span class="h2 fw-bold text-orange">New</span>
+    {
+      articles.map((article, i) => (
+        <article>
+          <a href="#" class="link-orange fw-bold h5">{article.title}</a>
+          <p class="text-muted">{article.content}</p>
+
+          {i !== 2 && <hr class="text-white my-3" />}
+        </article>
+      ))
+    }
+  </div>
+</aside>
