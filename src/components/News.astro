@@ -1,0 +1,54 @@
+---
+import retroImage from "../assets/images/image-retro-pcs.jpg";
+import topLaptopsImage from "../assets/images/image-top-laptops.jpg";
+import gamingImage from "../assets/images/image-gaming-growth.jpg";
+
+type New = {
+  index: string;
+  title: string;
+  content: string;
+  image: string;
+};
+
+const newsArray: New[] = [
+  {
+    index: "01",
+    title: "Reviving Retro PCs",
+    content: " What happens when old PCs are given modern upgrades?",
+    image: retroImage,
+  },
+  {
+    index: "02",
+    title: "Top 10 Laptops of 2022",
+    content: "Our best picks for various needs and budgets.",
+    image: topLaptopsImage,
+  },
+  {
+    index: "03",
+    title: "The Growth of Gaming",
+    content: "How the pandemic has sparked fresh opportunities.",
+    image: gamingImage,
+  },
+];
+---
+
+<div class="row justify-content-center">
+  {
+    newsArray.map(({ index, title, content, image }) => (
+      <div class="col-12 col-md-6 col-lg-4 mt-4">
+        <div class="row">
+          <div class="col-4">
+            <img src={image} alt={title} class="img-fluid" />
+          </div>
+          <div class="col-8 d-flex flex-column justify-content-between justify-content-sm-around justify-content-md-center justify-content-xl-between">
+            <span class="h2 fw-bold text-muted">{index}</span>
+            <a href="#" class="news-link h5">
+              {title}
+            </a>
+            <p class="my-0 text-muted">{content}</p>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>

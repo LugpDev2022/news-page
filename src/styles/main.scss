@@ -41,6 +41,17 @@ body {
   background-color: $dark-blue;
 }
 
+.news-link{
+  color: $dark-blue;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 200ms;
+
+  &:hover{
+    color: hsl(5, 85%, 63%);
+  }
+}
+
 .text-orange {
   color: hsl(35, 77%, 62%);
 }

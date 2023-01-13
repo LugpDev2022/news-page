@@ -3,20 +3,17 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Main from "../components/Main.astro";
 import Aside from "../components/Aside.astro";
+import News from "../components/News.astro";
 ---
 
 <Layout>
   <Navbar />
   <div class="container">
-    <div id="main-grid">
+    <div id="main-grid" class="mb-4">
       <Main />
       <Aside />
     </div>
-   
-
-    01 Reviving Retro PCs What happens when old PCs are given modern upgrades? 02
-    Top 10 Laptops of 2022 Our best picks for various needs and budgets. 03 The Growth
-    of Gaming How the pandemic has sparked fresh opportunities.
+    <News />
 
     <div>
       Challenge by <a
